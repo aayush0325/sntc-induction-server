@@ -1,4 +1,7 @@
 import { Hono } from "hono";
+import userRouter from "./routes/user";
+import { config } from "dotenv";
+config();
 
 type Bindings = {
   DB: D1Database;
@@ -6,5 +9,12 @@ type Bindings = {
 
 const app = new Hono<{ Bindings: Bindings }>();
 
+app.get('/', (c) => {
+  return c.json({
+    msg:'reached backend'
+  })
+})
+
+app.route('/api/v1/users',userRouter)
 
 export default app;
