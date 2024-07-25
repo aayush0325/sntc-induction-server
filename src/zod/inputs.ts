@@ -1,10 +1,10 @@
 import zod from 'zod';
 
-export const requestSchema = zod.object({
-    firstName:zod.string(),
-    lastName:zod.string(),
+// export const requestSchema = zod.object({
+//     firstName:zod.string(),
+//     lastName:zod.string(),
 
-});
+// });
 
 export const clubs = zod.union([
     zod.literal('COPS'),

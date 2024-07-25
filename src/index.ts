@@ -1,7 +1,5 @@
 import { Hono } from "hono";
 import userRouter from "./routes/user";
-import { config } from "dotenv";
-config();
 
 type Bindings = {
   DB: D1Database;
