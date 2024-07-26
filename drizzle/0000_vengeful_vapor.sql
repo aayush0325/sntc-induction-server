@@ -1,4 +1,10 @@
 CREATE TABLE `users` (
-	`userId` text PRIMARY KEY NOT NULL,
-	`clubs` text NOT NULL
+    `userId` TEXT NOT NULL PRIMARY KEY,
+    `COPS` BOOLEAN DEFAULT 0,
+    `theQuantClub` BOOLEAN DEFAULT 0,
+    `bizClub` BOOLEAN DEFAULT 0,
+    `SAE` BOOLEAN DEFAULT 0,
+    `AMC` BOOLEAN DEFAULT 0,
+    `astroClub` BOOLEAN DEFAULT 0,
+    `csi` BOOLEAN DEFAULT 0
 );
