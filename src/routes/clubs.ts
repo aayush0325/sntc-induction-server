@@ -11,12 +11,6 @@ type Bindings = {
 
 const clubRouter = new Hono<{ Bindings: Bindings }>();
 
-clubRouter.get('/',(c) => {
-    return c.json({
-        msg:'clubs router working'
-    })
-})
-
 clubRouter.post('/:club', async (c) => {
     const auth = getAuth(c);
     if (!auth?.userId) {
@@ -62,7 +56,5 @@ clubRouter.post('/:club', async (c) => {
 
     return c.json({ updatedUser }); 
 });
-
-
 
 export default clubRouter;

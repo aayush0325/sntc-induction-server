@@ -10,12 +10,6 @@ type Bindings = {
 
 const userRouter = new Hono<{ Bindings: Bindings }>();
 
-userRouter.get('/', (c) => {
-  return c.json({
-    msg: 'user router working'
-  });
-});
-
 userRouter.post('/signup', async (c) => {
 
   const auth = getAuth(c);
