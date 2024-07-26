@@ -16,6 +16,7 @@ compatibility_date = "2024-07-24"
 binding = "DB"
 database_name = "sntc-induction-db"
 database_id = "d3c7b4b2-2da8-4e89-ae10-e5d0b184830d"
+migrations_dir = "drizzle"
 
 # [ai]
 # binding = "AI"
