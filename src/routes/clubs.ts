@@ -3,7 +3,7 @@ import { users } from "../schema";
 import { getAuth } from "@hono/clerk-auth";
 import { drizzle } from "drizzle-orm/d1";
 import { clubs } from "../zod/inputvalidation";
-import { eq, lt, gte, ne } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 
 type Bindings = {
     DB: D1Database;

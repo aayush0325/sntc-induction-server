@@ -1,6 +1,5 @@
 import { Hono } from "hono"
-import { drizzle } from "drizzle-orm/d1";
-import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
+import { clerkMiddleware } from "@hono/clerk-auth";
 import userRouter from "./routes/user";
 import clubRouter from "./routes/clubs";
 
