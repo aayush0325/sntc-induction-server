@@ -6,5 +6,6 @@ CREATE TABLE `users` (
     `SAE` BOOLEAN DEFAULT 0,
     `AMC` BOOLEAN DEFAULT 0,
     `astroClub` BOOLEAN DEFAULT 0,
-    `csi` BOOLEAN DEFAULT 0
+    `csi` BOOLEAN DEFAULT 0,
+    `robotics` BOOLEAN DEFAULT 0
 );

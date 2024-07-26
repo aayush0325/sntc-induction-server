@@ -3,6 +3,7 @@ import { users } from "../schema";
 import { getAuth } from "@hono/clerk-auth";
 import { drizzle } from "drizzle-orm/d1";
 
+
 type Bindings = {
   DB: D1Database;
 };
@@ -16,13 +17,14 @@ userRouter.get('/', (c) => {
 });
 
 userRouter.post('/signup', async (c) => {
+
   const auth = getAuth(c);
   if (!auth?.userId) {
     return c.json({
       msg: 'you are not logged in'
     });
   }
-  
+
   const db = drizzle(c.env.DB);
   try {
     const result = await db.insert(users).values({ userId:auth.userId }).run();
