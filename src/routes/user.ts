@@ -22,17 +22,10 @@ userRouter.post('/signup', async (c) => {
       msg: 'you are not logged in'
     });
   }
-
-  const userId = c.req.header('Authorization')?.split(' ')[1];
-  if (!userId) {
-    return c.json({
-      msg: 'Invalid Authorization header'
-    });
-  }
-
+  
   const db = drizzle(c.env.DB);
   try {
-    const result = await db.insert(users).values({ userId }).run();
+    const result = await db.insert(users).values({ userId:auth.userId }).run();
     return c.json(result);
   } catch (error) {
     let errorMessage = 'An unknown error occurred';
