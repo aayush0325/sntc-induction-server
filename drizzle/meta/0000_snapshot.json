@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "66c24c6a-6ac8-4fd8-99b5-6218fac1ec74",
+  "id": "34e0e9d8-bb5c-4b84-b1a9-0e4032d13b7c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "users": {
@@ -14,12 +14,69 @@
           "notNull": true,
           "autoincrement": false
         },
-        "clubs": {
-          "name": "clubs",
-          "type": "text",
+        "COPS": {
+          "name": "COPS",
+          "type": "integer",
           "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "theQuantClub": {
+          "name": "theQuantClub",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "bizClub": {
+          "name": "bizClub",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "SAE": {
+          "name": "SAE",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "AMC": {
+          "name": "AMC",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "astroClub": {
+          "name": "astroClub",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "csi": {
+          "name": "csi",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
+        },
+        "robotics": {
+          "name": "robotics",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": false
         }
       },
       "indexes": {},
